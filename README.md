@@ -199,13 +199,13 @@ Export all AI-mapped CRM records into a standardized CSV file ready for import i
 ### Frontend
 
 ```
-https://your-vercel-url.vercel.app
+https://csv-lead-generator.vercel.app/
 ```
 
 ### Backend
 
 ```
-https://your-render-url.onrender.com
+https://groweasy-backend-2u12.onrender.com
 ```
 
 ---

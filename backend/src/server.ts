@@ -9,11 +9,16 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS for frontend accessibility
-app.use(cors({
-  origin: '*', // In production, we'd specify our frontend domain (e.g. Vercel deployment)
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://csv-lead-generator.vercel.app",
+    ],
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
