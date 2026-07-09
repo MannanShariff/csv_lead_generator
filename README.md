@@ -2,7 +2,11 @@
 
 An AI-powered web application that intelligently converts lead data from **any CSV format** into the standard **GrowEasy CRM** format.
 
-![Application Preview](demo/result_1.png)
+## 🌐 Live Demo
+
+**Frontend:** https://csv-lead-generator.vercel.app
+
+![Application Preview](demo/preview.png)
 
 Instead of relying on fixed column names, the application uses **Google Gemini 2.5 Flash** to understand the uploaded CSV and automatically map fields such as **Name, Email, Phone, Company, City, Notes, Lead Owner, Status**, and more.
 
