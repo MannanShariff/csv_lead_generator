@@ -1,6 +1,11 @@
 import { StreamMessage } from './types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+let baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+if (!baseUrl.endsWith('/api') && !baseUrl.endsWith('/api/')) {
+  const cleanUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+  baseUrl = `${cleanUrl}/api`;
+}
+export const API_BASE_URL = baseUrl;
 
 export async function importCSVStream(
   file: File,

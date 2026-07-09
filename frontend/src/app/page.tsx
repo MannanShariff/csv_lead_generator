@@ -7,7 +7,7 @@ import { PreviewTable } from '@/components/PreviewTable';
 import { StatsCard } from '@/components/StatsCard';
 import { ResultTable } from '@/components/ResultTable';
 import { LoadingDialog } from '@/components/LoadingDialog';
-import { importCSVStream } from '@/lib/api';
+import { importCSVStream, API_BASE_URL } from '@/lib/api';
 import { CRMLead, ImportSummary } from '@/lib/types';
 import { FileSpreadsheet, Play, RotateCcw, AlertTriangle, Sparkles, Download, ChevronDown } from 'lucide-react';
 
@@ -116,7 +116,6 @@ export default function Home() {
   ];
 
   const handleDownloadFile = (filename: string) => {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
     window.location.href = `${API_BASE_URL}/download-sample/${filename}`;
   };
 

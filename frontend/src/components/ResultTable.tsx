@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { CRMLead } from '../lib/types';
 import { Search, MapPin, Building, ShieldAlert, BadgeCheck, FileText, Download } from 'lucide-react';
 import Papa from 'papaparse';
+import { API_BASE_URL } from '../lib/api';
 
 interface ResultTableProps {
   records: CRMLead[];
@@ -17,7 +18,6 @@ export function ResultTable({ records }: ResultTableProps) {
   const handleExportCSV = async () => {
     if (records.length === 0) return;
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
       const response = await fetch(`${API_BASE_URL}/prepare-export`, {
         method: 'POST',
         headers: {
