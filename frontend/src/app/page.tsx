@@ -176,13 +176,24 @@ export default function Home() {
         
         {/* Title Area */}
         {crmLeads.length === 0 && (
-          <div className="text-center max-w-xl mx-auto space-y-3">
+          <div className="text-center max-w-xl mx-auto space-y-4">
             <h1 className="text-3xl font-extrabold text-zinc-100 tracking-tight sm:text-4xl">
               Import Leads from Any CSV Layout
             </h1>
             <p className="text-sm text-zinc-400 leading-relaxed">
               No standard column names required. Upload any client reports, marketing exports, or custom sheets. Our AI mapping engine does the matching instantly.
             </p>
+            
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/60 border border-zinc-800/80 text-[11px] text-zinc-400 font-medium">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              </span>
+              <span>
+                <strong className="text-indigo-400 font-semibold mr-1">Note:</strong> 
+                The backend may take a few moments to wake up on the first request.
+              </span>
+            </div>
           </div>
         )}
 
