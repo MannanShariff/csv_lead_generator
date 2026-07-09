@@ -46,7 +46,7 @@ Instead of relying on fixed column names, the application uses **Google Gemini 2
 # 📁 Project Structure
 
 ```
-groweasy-ai-csv-importer/
+csv_lead_generator/
 
 │
 ├── frontend/
@@ -64,7 +64,7 @@ groweasy-ai-csv-importer/
 ```bash
 git clone <your-repository-url>
 
-cd groweasy-ai-csv-importer
+cd csv_lead_generator
 ```
 
 ---
