@@ -1,0 +1,6 @@
+Customer Name,Contact,Mail ID,Remarks
+John Doe,+91 9876543210,john@gmail.com,Interested
+Sarah Johnson,+91 9876543211,sarah@gmail.com,Please call back
+Rajesh Patel,+91 9876543212,rajesh@gmail.com,Not interested
+Invalid Row Without Contact,,,,
+Weird Layout Named Lead,9876543299,abc@gmail.com,Client looking for sarjapur plots
